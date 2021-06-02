@@ -1,0 +1,5 @@
+---
+user:
+  user_name: nick
+  user_passwd: "1234"
+  user_group: nick
