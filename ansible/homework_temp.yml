@@ -1,6 +1,0 @@
----
-- name: Nginx
-  hosts: myhost
-  gather_facts: no
-  roles:
-    - role: nginx
