@@ -5,3 +5,15 @@
       - nginx
     state: latest
 
+- name: Configuring port
+  command: "{{ item }}"
+  with_items:
+    - "sed -i 's/listen       80/listen       9090/g' /etc/nginx/nginx.conf"
+    - "setenforce 0"
+    - "systemctl start nginx"
+    - "systemctl enable nginx"
+
+- name: Check Nginx service
+  service:
+    name: nginx
+    state: started

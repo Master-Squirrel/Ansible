@@ -26,3 +26,9 @@
   roles:
     - role: create_json_file
 
+- name: Nginx
+  hosts: myhost
+  gather_facts: no
+  roles:
+    - role: nginx
+
