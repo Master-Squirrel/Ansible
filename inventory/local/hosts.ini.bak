@@ -1,0 +1,10 @@
+[localhost]
+127.0.0.1
+
+[myhost]
+127.0.0.1
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=root
+ansible_ssh_pass=1234
