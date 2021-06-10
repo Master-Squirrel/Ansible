@@ -1,9 +1,9 @@
 ---
 - hosts: prodgeek
-
   vars_files:
-    - vars/wordpress.yml 
+   - vars/wordpress.yml 
   roles:
+    - initiate_vars
     - geerlingguy.nginx 
     - geerlingguy.php
     - geerlingguy.mysql
