@@ -1,0 +1,13 @@
+---
+- name: Installing apps
+  package:
+    name:
+      - wget
+      - tcpdump
+    state: latest
+
+- name: Downloading file
+  shell: "{{ item }}"
+  with_items:
+    - mkdir -p /opt/data_archives/
+    - wget -O  /opt/data_archives/index.html  https://master-squirrel.github.io/burger/index.html

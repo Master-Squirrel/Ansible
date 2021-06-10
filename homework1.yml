@@ -1,0 +1,33 @@
+---
+- name: Homework1
+  hosts: myhost
+  gather_facts: no
+  tasks:
+    - shell: echo Begin homework 1
+    - shell: echo OK
+
+- name: download file
+  hosts: myhost
+  become: true
+  gather_facts: no
+  roles:
+    - {role: download_file, tags: [common, config]}
+
+- name: creating user
+  hosts: myhost
+  gather_facts: no
+  roles:
+    - {role: create_user, tags: [config]}
+
+
+- name: Creating JSON
+  hosts: myhost
+  gather_facts: no
+  roles:
+    - {role:  create_json_file, tags: [config]}
+
+- name: Nginx
+  hosts: myhost
+  gather_facts: no
+  roles:
+    - {role:  nginx, tags: [config]}

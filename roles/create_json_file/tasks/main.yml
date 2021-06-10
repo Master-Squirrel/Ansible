@@ -1,0 +1,4 @@
+---
+- name: Creating json file
+  shell: echo {{ '' | to_json }} >> {{ lookup('env','HOME') }}/application.json
+
